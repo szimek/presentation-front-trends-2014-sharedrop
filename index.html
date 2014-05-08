@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>ShareDrop</title>
+  <!--<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">-->
+  <!--<meta name="viewport" content="width=device-width, initial-scale=1.0">-->
+  <!--This one seems to work all the time, but really small on ipad-->
+  <!--<meta name="viewport" content="initial-scale=0.4">-->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <link rel="stylesheet" media="all" href="theme/css/default.css">
+  <link rel="stylesheet" media="all" href="theme/css/meetjs.css">
+  <link rel="stylesheet" media="only screen and (max-device-width: 480px)" href="theme/css/phone.css">
+  <base target="_blank"> <!-- This amazingness opens all links in a new tab. -->
+  <script data-main="js/slides" src="js/require-1.0.8.min.js"></script>
+</head>
+<body style="opacity: 0">
+  <slides class="layout-widescreen">
+
+  <slide class="title-slide segue nobackground">
+    <aside class="gdbar"><img src="images/ft_logo.png" alt="meetjs logo"></aside>
+    <!-- The content of this hgroup is replaced programmatically through the slide_config.json. -->
+    <hgroup class="auto-fadein">
+      <h1 data-config-title><!-- populated from slide_config.json --></h1>
+      <h2 data-config-subtitle><!-- populated from slide_config.json --></h2>
+      <p data-config-presenter><!-- populated from slide_config.json --></p>
+    </hgroup>
+  </slide>
+
+  <slide class="fill">
+    <article class="flexbox vcenter">
+      <img src="images/xkcd_file_transfer.png">
+    </article>
+  </slide>
+
+  <slide class="fill">
+    <article class="flexbox vcenter">
+      <img src="images/airdrop.png" style="width: 850px">
+    </article>
+  </slide>
+
+  <slide class="fill">
+    <article class="flexbox vcenter">
+      <img src="images/1-sharedrop.png" style="width: 850px;">
+    </article>
+  </slide>
+
+  <slide class="fill">
+    <article class="flexbox vcenter">
+      <img src="images/sharedrop.svg" style="width: 500px;">
+    </article>
+  </slide>
+
+  <slide class="fill">
+    <article class="flexbox vcenter">
+      <img src="images/sharedrop-ft2014.mov.gif" style="width: 900px;">
+    </article>
+  </slide>
+
+  <slide>
+    <article class="flexbox vcenter sparse">
+      <h1>Hidden feature!</h1>
+    </article>
+  </slide>
+
+
+  <slide>
+    <article class="flexbox vcenter sparse">
+      <h2>Cross network file sharing</h2>
+      <h3>https://www.sharedrop.io/<strong style="font-weight: 800; font-size: 1.3em">rooms/&lt;whatever&gt;</strong></h3>
+    </article>
+  </slide>
+
+  <slide>
+    <article class="flexbox vcenter bigger sparse">
+      <h2>WebRTC</h2>
+      <h2>Firebase</h2>
+      <h2>FileSystem API</h2>
+    </article>
+  </slide>
+
+  <slide>
+    <article class="flexbox vcenter">
+      <h1>WebRTC</h1>
+    </article>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>WebRTC</h2>
+    </hgroup>
+    <article class="flexbox vcenter sparse">
+      <h2>SCTP</h2>
+      <h2>SDP</h2>
+      <h2>ICE</h2>
+      <h2>STUN</h2>
+      <h2>TURN</h2>
+    </article>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>WebRTC - SCTP</h2>
+    </hgroup>
+    <article class="flexbox vcenter sparse">
+      <h2>Stream Control Transmission Protocol</h2>
+      <ul style="font-size: 1.3em;">
+        <li>reliable / unreliable</li>
+        <li>ordered / unordered</li>
+      </ul>
+    </article>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>WebRTC - SDP</h2>
+    </hgroup>
+    <article class="flexbox vcenter sparse">
+      <h2>Session Description Protocol</h2>
+      <h3>what are my browser's media capabilities</h3>
+    </article>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>WebRTC - ICE</h2>
+    </hgroup>
+    <article class="flexbox vcenter sparse">
+      <h2>Interactive Connectivity Establishment</h2>
+      <h3>what are my IP addresses and ports</h3>
+    </article>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>WebRTC</h2>
+    </hgroup>
+    <article class="flexbox vcenter sparse">
+      <h1>WebRTC signaling</h1>
+    </article>
+  </slide>
+
+  <slide class="fill">
+    <article class="flexbox vcenter">
+      <img src="images/0-noSTUNorTURN.png" style="width: 850px;">
+    </article>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>WebRTC - STUN</h2>
+    </hgroup>
+    <article class="flexbox vcenter sparse">
+      <h2>Session Traversal Utilities for NAT</h2>
+      <h3>what is my public IP address</h3>
+    </article>
+  </slide>
+
+  <slide class="fill">
+    <article class="flexbox vcenter">
+      <img src="images/1-firewall.png" style="width: 850px;">
+    </article>
+  </slide>
+
+  <slide class="fill">
+    <article class="flexbox vcenter">
+      <img src="images/2-stun.png" style="width: 850px;">
+    </article>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>WebRTC - TURN</h2>
+    </hgroup>
+    <article class="flexbox vcenter sparse">
+      <h2>Traversal Using Relays around NAT</h2>
+      <h3>WARNING: not peer-to-peer connection</h3>
+    </article>
+  </slide>
+
+  <slide class="fill">
+    <article class="flexbox vcenter">
+      <img src="images/3-STUNandTURN.png" style="width: 850px;">
+    </article>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>SimpleWebRTC</h2>
+    </hgroup>
+    <article>
+      <pre class="prettyprint">
+        var webrtc = new WebRTC({
+          localVideoEl: 'localVideo',
+          remoteVideosEl: 'remoteVideos',
+          autoRequestMedia: true
+        });
+
+        webrtc.on('readyToCall', function () {
+          webrtc.joinRoom('My room name');
+        });
+      </pre>
+    </article>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>PeerJS</h2>
+    </hgroup>
+    <article>
+      <pre class="prettyprint">
+      var peer = new Peer();
+      var conn = peer.connect('dest-peer-id');
+
+      conn.on('open', function () {
+          // Receive messages
+          conn.on('data', function (data) {
+              console.log('Received', data);
+          });
+
+          // Send messages
+          conn.send('Hello!');
+      });
+      </pre>
+    </article>
+  </slide>
+
+  <slide class="fill">
+    <article class="flexbox vcenter">
+      <img src="images/firebase_logo.png" style="width: 500px;">
+    </article>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>Firebase</h2>
+    </hgroup>
+    <article class="flexbox vcenter sparse">
+      <h2>Presence management</h2>
+      <h2>WebRTC signaling</h2>
+    </article>
+  </slide>
+
+  <slide>
+    <article class="flexbox vcenter">
+      <h1>FileSystem API</h1>
+    </article>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>FileSystem API</h2>
+    </hgroup>
+    <article class="flexbox vcenter slim">
+      <h2>Never have to store the whole file in memory</h2>
+    </article>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>FileSystem API</h2>
+    </hgroup>
+    <article class="flexbox vcenter sparse slim">
+      <h2>FileReader</h2>
+      <h2>FileWriter</h2>
+    </article>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>WebRTC</h2>
+      <h3>Chunking data</h3>
+    </hgroup>
+    <article class="flexbox vcenter slim">
+      <h3>Chrome has send size limit of 16KB (to be removed in the future)<h3>
+      <h3>Data is sent in 1MB blocks - 64 x 16KB chunks</h3>
+    </article>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>FileSystem API</h2>
+    </hgroup>
+    <article class="flexbox vcenter slim">
+      <h2>ebidel/idb.filesystem.js</h2>
+      <h3>polyfill for Firefox that uses IndexedDB</h3>
+    </article>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>FileSystem API</h2>
+    </hgroup>
+    <article class="flexbox vcenter slim">
+      <h2>ebidel/filer.js</h2>
+      <h3>FileSystem API wrapper that provides UNIX-like API (ls, cp, mv)</h3>
+    </article>
+  </slide>
+
+  <slide>
+    <article class="flexbox vcenter sparse">
+      <h2>https://www.sharedrop.io</h2>
+      <h2>https://github.com/cowbell/sharedrop</h2>
+    </article>
+  </slide>
+
+  <slide class="thank-you-slide segue nobackground">
+    <article class="flexbox vleft auto-fadein">
+      <h2>Thank You!</h2>
+    </article>
+    <p class="auto-fadein" data-config-contact>
+      <!-- populated from slide_config.json -->
+    </p>
+  </slide>
+
+  <!-- don't remove this slide! -->
+  <slide class="backdrop"></slide>
+</slides>
+</body>
+</html>
